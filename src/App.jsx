@@ -17,6 +17,7 @@ import Admindashboard from './Pages/Dashboard/Admindashboard';
 import Adminkelolawisata from './Pages/Dashboard/Adminkelolawisata';
 import Adminakunpengelola from './Pages/Dashboard/Adminakunpengelola';
 import Admintambahwisata from './Pages/Dashboard/Admintambahwisata';
+import Payment from './Pages/Payment';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/Adminkelolawisata" element={<Adminkelolawisata/>} />
         <Route path="/Adminakunpengelola" element={<Adminakunpengelola/>} />
         <Route path="/Admintambahwisata" element={<Admintambahwisata/>} />
+        <Route path="/Payment" element={<Payment/>} />
       </Routes>
     </Router>
   );
