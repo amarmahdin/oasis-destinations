@@ -13,6 +13,7 @@ import Descarjuno from './Pages/Gunung/Descarjuno';
 import Desctumpaksewu from './Pages/Air Terjun/Desctumpaksewu';
 import Profile from './Pages/Profile';
 import Airterjun from './Pages/Air Terjun/Airterjun';
+import Lainnya from './Pages/Lainnya/Lainnya';
 import Admindashboard from './Pages/Dashboard/Admindashboard';
 import Adminkelolawisata from './Pages/Dashboard/Adminkelolawisata';
 import Adminakunpengelola from './Pages/Dashboard/Adminakunpengelola';
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Pantai" element={<Pantai />} />
         <Route path="/Gunung" element={<Gunung />} />
         <Route path="/Airterjun" element={<Airterjun />} />
+        <Route path="/Lainnya" element={<Lainnya />} />
         <Route path="/Login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/Descplengkung" element={<Descplengkun/>} />

@@ -59,7 +59,7 @@ function Content() {
         </div>
       </div>
       <div className='py-8'>
-        <button className='border-2 bg-E text-white font-medium py-4 px-5 rounded-xl text-lg'>Explore Now</button>
+        <a href="/Destination"><button className='border-2 bg-E text-white font-medium py-4 px-5 rounded-xl text-lg'>Explore Now</button></a>
       </div>
     </div>
     <div className='absolute pl-[65px] pr-[59px] py-[14px] text-gray-400 bg-white rounded-[50px] justify-end items-start gap-[227px] inline-flex top-[200px] left-[540px] w-[573px] h-[60px]'>
@@ -199,7 +199,7 @@ function Content() {
             <h1 className='absolute -translate-y-[650px] ml-16 text-E text-[40px] font-semibold w-[600px]'>JELAJAHI CARA BERBEDA UNTUK PERJALANAN</h1>
             <p className='absolute -translate-y-[480px] w-[600px] text-justify text-E ml-16 text-base'>Mulailah petualangan tak terlupakan di Jawa Timur dengan platform pemesanan tiket dan penyewaan perlengkapan terintegrasi kami! Jelajahi destinasi menakjubkan, benamkan diri Anda dalam pengalaman budaya yang kaya, dan ciptakan kenangan yang tak terlupakan seumur hidup.</p>
             <p className='absolute -translate-y-[380px] w-[600px] text-justify text-E ml-16 text-base'>Jelajahi pegunungan yang megah, saksikan matahari terbit di atas kaldera, dan ciptakan kenangan tak terlupakan dengan layanan pemesanan dan penyewaan kami yang lancar. Temukan Harta Karun Jawa Timur: Pemesanan Tiket Mudah, Penyewaan Perlengkapan, dan Pengalaman Tak Terlupakan!</p>
-            <button className='absolute -translate-y-[200px] w-[212px] bg-E text-white font-semibold ml-16 h-11 rounded-[20px]'>Tentang Kami</button>
+            <a href="/About"><button className='absolute -translate-y-[200px] w-[212px] bg-E text-white font-semibold ml-16 h-11 rounded-[20px]'>Tentang Kami</button></a>
         </div>
     </div>
   );
