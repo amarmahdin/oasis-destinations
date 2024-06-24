@@ -129,33 +129,33 @@ function Content() {
             <img src={locw} alt="" className='w-[15px]'/>
             <h1 className='text-white ml-2 text-[14px]'>Pacitan, Jawa Timur</h1>
           </div>
-          <h1 className='text-white font-bold text-[29px] w-10'>PULAU</h1>
+          <h1 className='text-white font-bold text-[29px] w-10'>SUNGAI COKEL</h1>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
       <div className='w-[321px] h-[390px] -translate-x-[250px]'>
           <a href=""><img src={im4} alt="" className='w-[100%] h-[100%] rounded-2xl'/></a>
-          <div className='w-5 h-5 bg-white text-center text-E rounded-[50px] float-end -translate-y-[387px] mr-2'>1</div>
+          <div className='w-5 h-5 bg-white text-center text-E rounded-[50px] float-end -translate-y-[387px] mr-2'>4</div>
           <div className='absolute -translate-y-36 ml-8'>          
             <div className='flex mb-1'>
             <img src={locw} alt="" className='w-[15px]'/>
-            <h1 className='text-white ml-2 text-[14px]'>Banyuwangi, Jawa Timur</h1>
+            <h1 className='text-white ml-2 text-[14px]'>Lumajang, Jawa Timur</h1>
           </div>
-          <h1 className='text-white font-bold text-[29px] w-10'>PULAU MENJANGAN</h1>
+          <h1 className='text-white font-bold text-[29px] w-10'>GUNUNG SEMERU</h1>
           </div>
         </div>
       </SwiperSlide>
       <SwiperSlide>
-      <div className='w-[321px] h-[390px] -translate-x-[250px]'>
+      <div className='w-[321px] h-[390px] -translate-x-[380px]'>
           <a href=""><img src={im5} alt="" className='w-[100%] h-[100%] rounded-2xl'/></a>
-          <div className='w-5 h-5 bg-white text-center text-E rounded-[50px] float-end -translate-y-[387px] mr-2'>1</div>
+          <div className='w-5 h-5 bg-white text-center text-E rounded-[50px] float-end -translate-y-[387px] mr-2'>5</div>
           <div className='absolute -translate-y-36 ml-8'>          
             <div className='flex mb-1'>
             <img src={locw} alt="" className='w-[15px]'/>
-            <h1 className='text-white ml-2 text-[14px]'>Banyuwangi, Jawa Timur</h1>
+            <h1 className='text-white ml-2 text-[14px]'>Lumajang, Jawa Timur</h1>
           </div>
-          <h1 className='text-white font-bold text-[29px] w-10'>PULAU MENJANGAN</h1>
+          <h1 className='text-white font-bold text-[29px] w-10'>GUNUNG BROMO</h1>
           </div>
         </div>
       </SwiperSlide>

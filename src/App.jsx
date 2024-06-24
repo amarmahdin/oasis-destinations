@@ -19,7 +19,6 @@ import Adminakunpengelola from './Pages/Dashboard/Adminakunpengelola';
 import Admintambahwisata from './Pages/Dashboard/Admintambahwisata';
 import Payment from './Pages/Payment';
 
-
 function App() {
 
   return (
