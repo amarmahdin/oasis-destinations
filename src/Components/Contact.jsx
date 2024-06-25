@@ -2,16 +2,16 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div className='-translate-y-[300px]'>
-        <h1 className='text-E font-semibold text-center text-[24px]'>UMPAN BALIK KEPUASAN</h1>
+    <div className='h-[130px] -translate-y-[350px]'>
+        <h1 className='text-E font-semibold text-center text-[23px]'>UMPAN BALIK KEPUASAN</h1>
         <div className='translate-y-16'>
             <form className='flex'>
-                <div className='px-48'>
+                <div className='px-60'>
                     <label htmlFor="name" className='mx-3 block text-E text-sm font-semibold mb-1'>Full Name*</label>
-                    <input type="text" id='name' name='name' className='shadow-xl w-[526px] h-[60px] px-4 py-2 border-2 border-E rounded-md outline-none' placeholder='Enter your full name here' required />
+                    <input type="text" id='name' name='name' className='shadow-xl w-[450px] h-[40px] px-4 py-2 border-2 border-E rounded-md outline-none' placeholder='Enter your full name here' required />
                     <label htmlFor="Email" className='mx-3 block text-E text-sm font-semibold mb-1 my-6'>Email*</label>
-                    <input type="email" id='email' name='email' className='shadow-xl w-[526px] h-[60px] px-4 border-2 border-E rounded-md outline-none' placeholder='Enter your email here' required />
-                    <button className='text-gray-400 w-[163px] h-11 border-2 border-E shadow-xl rounded-md -translate-x-[525px] translate-y-20'>Send!</button>
+                    <input type="email" id='email' name='email' className='shadow-xl w-[450px] h-[60px] px-4 border-2 border-E rounded-md outline-none' placeholder='Enter your email here' required />
+                    <button className='text-gray-400 w-[100px] h-9 border-2 border-E shadow-xl rounded-md -translate-x-[450px] translate-y-20'>Send!</button>
                 </div>
                 <div className='-translate-x-36'>
                 <label htmlFor="message" className='mx-3 block text-E text-sm font-semibold mb-1'>Message*</label>
