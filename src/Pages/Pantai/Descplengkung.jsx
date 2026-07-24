@@ -1,16 +1,13 @@
-import React from 'react'
-import Header from '../../Components/Header'
-import Plengkung from '../../Components/Desc/Plengkung'
-import Footer from '../../Components/Footer'
+import MainLayout from '../../layouts/MainLayout'
+import DestinationDetail from '../../Components/DestinationDetail'
+import { destinationDetails } from '../../data/destinations'
 
-function Desc1() {
+function Descplengkung() {
   return (
-    <>
-    <Header/>
-    <Plengkung/>
-    <Footer/>
-    </>
+    <MainLayout>
+      <DestinationDetail data={destinationDetails.plengkung} />
+    </MainLayout>
   )
 }
 
-export default Desc1
+export default Descplengkung

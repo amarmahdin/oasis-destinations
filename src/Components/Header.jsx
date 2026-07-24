@@ -1,31 +1,55 @@
-import { useNavigate } from "react-router-dom";
-import logo from "../Assets/logo.png"
+import { Link, NavLink } from 'react-router-dom'
+import logo from '../Assets/logo.png'
 
+const NAV_ITEMS = [
+  { label: 'Home', path: '/' },
+  { label: 'Destination', path: '/Destination' },
+  { label: 'About', path: '/About' },
+  { label: 'News', path: '/News' },
+]
 
-const Header = () => {
-  const navigate = useNavigate()
-
+function Header() {
   return (
-    <>
-    <nav className="fixed top-0 left-0 right-0 h-[85px] flex bg-white z-10">
-        <div className="mx-28 ">
-                <img src={logo} alt="" className="w-[150px]"/>
-        </div>
-        <div className="py-1 mx-32">
-            <ul className="flex w-96"> 
-                <li className="m-7 ml-10 text-xl text-gray-400"><a href="/" className="hover:text-E text-base tracking-widest relative group">Home<div className="absolute w-full h-0.5 bg-E/80 scale-x-0 group-hover:scale-x-100"/></a></li>
-                <li className="m-7 ml-10 text-xl text-gray-400"><a href="/Destination" className="hover:text-E text-base tracking-widest relative group">Destination<div className="absolute w-full h-0.5 bg-E/80 scale-x-0 group-hover:scale-x-100"/></a></li>
-                <li className="m-7 ml-10 text-xl text-gray-400"><a href="/About" className="hover:text-E text-base tracking-widest relative group">About<div className="absolute w-full h-0.5 bg-E/80 scale-x-0 group-hover:scale-x-100"/></a></li>
-                <li className="m-7 ml-10 text-xl text-gray-400"><a href="/News" className="hover:text-E text-base tracking-widest relative group">News<div className="absolute w-full h-0.5 bg-E/80 scale-x-0 group-hover:scale-x-100"/></a></li>
-            </ul>
-        </div>
-        <div className="py-7 ml-48">
-            <a href="/Signup"><button className="text-E mr-7 px-[17px] py-[3px] border-2 border-E rounded-md ">Sign Up</button></a>
-            <a href="/Login"><button className="px-[17px] py-[3px] text-white border-2 border-E bg-E rounded-md">Login</button></a>
-        </div>
+    <nav className="fixed left-0 right-0 top-0 z-10 flex h-[85px] items-center justify-between bg-white px-6 md:px-16 lg:px-28">
+      <Link to="/">
+        <img src={logo} alt="Oasis Destinations" className="w-[150px]" />
+      </Link>
+
+      <ul className="hidden items-center gap-8 md:flex lg:gap-10">
+        {NAV_ITEMS.map((item) => (
+          <li key={item.path}>
+            <NavLink
+              to={item.path}
+              end={item.path === '/'}
+              className={({ isActive }) =>
+                `group relative text-base tracking-widest transition hover:text-E ${
+                  isActive ? 'text-E' : 'text-gray-400'
+                }`
+              }
+            >
+              {item.label}
+              <span className="absolute h-0.5 w-full scale-x-0 bg-E/80 transition group-hover:scale-x-100" />
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+
+      <div className="flex items-center gap-3">
+        <Link
+          to="/Signup"
+          className="rounded-md border-2 border-E px-[17px] py-[3px] text-E"
+        >
+          Sign Up
+        </Link>
+        <Link
+          to="/Login"
+          className="rounded-md border-2 border-E bg-E px-[17px] py-[3px] text-white"
+        >
+          Login
+        </Link>
+      </div>
     </nav>
-    </>
-  );
+  )
 }
 
 export default Header

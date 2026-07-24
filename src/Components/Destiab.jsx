@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import desti from '../Assets/desti.png'
 import kart from '../Assets/kart.png'
 import pnt from '../Assets/pnt.png'
@@ -7,77 +7,97 @@ import air from '../Assets/air.png'
 import lny from '../Assets/lny.png'
 import next from '../Assets/next.png'
 
+const CATEGORIES = [
+  {
+    title: 'Pantai',
+    image: pnt,
+    path: '/Pantai',
+    description: 'Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota',
+  },
+  {
+    title: 'Gunung',
+    image: gng,
+    path: '/Gunung',
+    description: 'Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota',
+  },
+  {
+    title: 'Air Terjun',
+    image: air,
+    path: '/Airterjun',
+    description: 'Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota',
+  },
+  {
+    title: 'Lainnya',
+    image: lny,
+    path: '/Lainnya',
+    description: 'Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota',
+  },
+]
+
 function Destiab() {
   return (
-    <div className='py-20 '>
-        <img src={desti} alt="" className='w-[100%]'/>
-        <h1 className='absolute -translate-y-[509px] mx-16 w-[700px] text-[50px] text-white font-medium'>Kunjungi Destinasi Wisata Terbaik di Jawa Timur</h1>
-        <h1 className='justify-self-end absolute -translate-y-[330px] mx-[960px] w-[600px] text-[30px] font-medium text-white'>Klik tombol dibawah untuk melihat destinasi wisata yang tersedia saat ini!</h1>
-        <div>
-            <a href="#y"><button className='absolute -translate-y-[200px] mx-[1150px] bg-white w-[230px] h-[60px] rounded-[51px] text-[25px] font-medium'>Wisata</button></a>
+    <div className="pt-20">
+      <section className="relative">
+        <img src={desti} alt="" className="w-full" />
+        <div className="absolute inset-0 flex flex-col justify-center gap-6 px-6 text-white md:px-16 lg:flex-row lg:items-center lg:justify-between">
+          <h1 className="max-w-[700px] text-3xl font-medium md:text-[50px]">
+            Kunjungi Destinasi Wisata Terbaik di Jawa Timur
+          </h1>
+          <div className="max-w-[600px] lg:text-right">
+            <p className="text-xl font-medium md:text-[30px]">
+              Klik tombol dibawah untuk melihat destinasi wisata yang tersedia saat ini!
+            </p>
+            <a href="#y">
+              <button
+                type="button"
+                className="mt-4 h-[60px] w-[230px] rounded-[51px] bg-white text-[25px] font-medium text-black"
+              >
+                Wisata
+              </button>
+            </a>
+          </div>
         </div>
-        <div className='flex border-2  translate-y-10  ml-[180px] border-[#BFE7F7] rounded-xl w-[1280px] h-[150px]'>
-            <img src={kart} alt="" className='mx-[39px]'/>
-            <div className='my-8'>
-                <h1 className='text-[30px] font-semibold'>Udah punya akun belum?</h1>
-                <p className='text-[20px]'>Buat akun atau log in yuk, biar bisa beli tiket wisata tanpa ribet ✌️😍</p>
-            </div>
-            <div id='y' className='translate-x-32 my-10'>
-                <button className='w-[176px] h-[62px] rounded-xl bg-[#BFE7F7] text-[#0047FF] text-[29px] font-semibold'>Masuk</button>
-            </div>
+      </section>
+
+      <div
+        id="y"
+        className="mx-auto mt-10 flex w-full max-w-[1280px] flex-col items-center gap-6 rounded-xl border-2 border-[#BFE7F7] px-6 py-6 md:flex-row md:px-10"
+      >
+        <img src={kart} alt="" className="shrink-0" />
+        <div className="flex-1">
+          <h2 className="text-2xl font-semibold md:text-[30px]">Udah punya akun belum?</h2>
+          <p className="text-lg md:text-[20px]">
+            Buat akun atau log in yuk, biar bisa beli tiket wisata tanpa ribet ✌️😍
+          </p>
         </div>
-        <div  className='h-[1220px] bg-[#EDF5F9] translate-y-[80px]'>
-            <h1 className='text-[48px] py-5 mx-[180px] font-semibold '>Kategori</h1>
-            <p className='mx-[180px] text-gray-500 text-2xl'>Menampilkan 5 hasil kategori</p>
-            <div className='ml-[180px] my-7 w-[1291px] h-[200px]'>
-                <img src={pnt} alt="" className='rounded-xl'/>
-                <div className='flex'>
-                <div className='absolute -translate-y-[170px] ml-14'>
-                <h1 className='text-white text-[64px] font-semibold'>Pantai</h1>
-                <p className='text-white text-xl'>Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota</p>
+        <Link
+          to="/Login"
+          className="flex h-[62px] w-[176px] items-center justify-center rounded-xl bg-[#BFE7F7] text-[29px] font-semibold text-[#0047FF]"
+        >
+          Masuk
+        </Link>
+      </div>
+
+      <section className="mt-16 bg-[#EDF5F9] px-6 py-8 md:px-[180px]">
+        <h2 className="py-5 text-4xl font-semibold md:text-[48px]">Kategori</h2>
+        <p className="text-2xl text-gray-500">Menampilkan {CATEGORIES.length} hasil kategori</p>
+        <div className="mt-7 space-y-10">
+          {CATEGORIES.map((category) => (
+            <article key={category.path} className="relative w-full max-w-[1291px] overflow-hidden rounded-xl">
+              <img src={category.image} alt={category.title} className="h-[200px] w-full rounded-xl object-cover" />
+              <div className="absolute inset-0 flex items-center justify-between px-6 md:px-14">
+                <div>
+                  <h3 className="text-4xl font-semibold text-white md:text-[64px]">{category.title}</h3>
+                  <p className="max-w-xl text-white md:text-xl">{category.description}</p>
                 </div>
-                <div className='-translate-y-[170px] ml-[1100px] mt-8'>
-                    <a href="/Pantai"><img src={next} alt="" /></a>
-                </div>
-                </div>
-            </div>
-            <div className='mx-[180px] my-14 w-[1291px] h-[200px]'>
-                <img src={gng} alt="" className='rounded-xl'/>
-                <div className='flex'>
-                <div className='absolute -translate-y-[170px] mx-14'>
-                <h1 className='text-white text-[64px] font-semibold'>Gunung</h1>
-                <p className='text-white text-xl'>Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota</p>
-                </div>
-                <div className='-translate-y-[170px] ml-[1100px] mt-8'>
-                    <a href="/Gunung"><img src={next} alt="" /></a>
-                </div>
-                </div>
-            </div>
-            <div className='mx-[180px] my-7 w-[1291px] h-[200px]'>
-                <img src={air} alt="" className='rounded-xl'/>
-                <div className='flex'>
-                <div className='absolute -translate-y-[170px] mx-14'>
-                <h1 className='text-white text-[64px] font-semibold'>Air Terjun</h1>
-                <p className='text-white text-xl'>Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota</p>
-                </div>
-                <div className='-translate-y-[170px] ml-[1100px] mt-8'>
-                    <a href="/Airterjun"><img src={next} alt="" /></a>
-                </div>
-                </div>
-            </div>
-            <div className='mx-[180px] my-14 w-[1291px] h-[200px]'>
-                <img src={lny} alt="" className='rounded-xl'/>
-                <div className='flex'>
-                <div className='absolute -translate-y-[170px] mx-14'>
-                <h1 className='text-white text-[64px] font-semibold'>Lainnya</h1>
-                <p className='text-white text-xl'>Klik tombol untuk melihat destinasi wisata pantai yang ada di berbagai kota</p>
-                </div>
-                <div className='-translate-y-[170px] ml-[1100px] mt-8'>
-                    <a href="/Lainnya"><img src={next} alt="" /></a>
-                </div>
-                </div>
-            </div>
+                <Link to={category.path} className="shrink-0">
+                  <img src={next} alt={`Lihat ${category.title}`} />
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
+      </section>
     </div>
   )
 }

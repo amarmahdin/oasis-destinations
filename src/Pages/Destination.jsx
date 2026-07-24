@@ -1,15 +1,11 @@
-import React from 'react'
-import Header from '../Components/Header'
+import MainLayout from '../layouts/MainLayout'
 import Destiab from '../Components/Destiab'
-import Footer from '../Components/Footer'
 
 function Destination() {
   return (
-    <>
-    <Header />
-    <Destiab />
-    <Footer />
-    </>
+    <MainLayout>
+      <Destiab />
+    </MainLayout>
   )
 }
 

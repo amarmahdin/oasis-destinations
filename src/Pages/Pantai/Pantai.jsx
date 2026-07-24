@@ -1,16 +1,11 @@
-import React from 'react'
-import Header from '../../Components/Header'
-import Contpantai from '../../Components/Contpantai'
-import Footer from '../../Components/Footer'
+import MainLayout from '../../layouts/MainLayout'
+import CategoryList from '../../Components/CategoryList'
 
 function Pantai() {
   return (
-    <>
-    <Header/>
-    <Contpantai/>
-    <Footer/>
-    </>
-    
+    <MainLayout>
+      <CategoryList categoryKey="pantai" />
+    </MainLayout>
   )
 }
 

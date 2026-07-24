@@ -1,13 +1,12 @@
-import React from 'react'
-import Header from '../../Components/Header'
-import Tumpaksewu from '../../Components/Desc/Tumpaksewu'
+import MainLayout from '../../layouts/MainLayout'
+import DestinationDetail from '../../Components/DestinationDetail'
+import { destinationDetails } from '../../data/destinations'
 
 function Desctumpaksewu() {
   return (
-    <>
-    <Header/>
-    <Tumpaksewu/>
-    </>
+    <MainLayout>
+      <DestinationDetail data={destinationDetails.tumpaksewu} />
+    </MainLayout>
   )
 }
 

@@ -1,15 +1,11 @@
-import React from 'react'
-import Navdash from '../../Components/Navdash'
-import Navdashh from '../../Components/Navdashh'
+import AdminLayout from '../../layouts/AdminLayout'
 import Contwisata from '../../Components/Dash/Contwisata'
 
 function Adminkelolawisata() {
   return (
-    <>
-    <Navdashh/>
-    <Navdash/>
-    <Contwisata/>
-    </>
+    <AdminLayout>
+      <Contwisata />
+    </AdminLayout>
   )
 }
 

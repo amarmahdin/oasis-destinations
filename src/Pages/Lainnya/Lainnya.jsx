@@ -1,15 +1,11 @@
-import React from 'react'
-import Header from '../../Components/Header'    
-import Footer from '../../Components/Footer'
-import Contlainnya from '../../Components/Contlainnya'
+import MainLayout from '../../layouts/MainLayout'
+import CategoryList from '../../Components/CategoryList'
 
 function Lainnya() {
   return (
-    <>
-    <Header/>
-    <Contlainnya/>
-    <Footer/>
-    </>
+    <MainLayout>
+      <CategoryList categoryKey="lainnya" />
+    </MainLayout>
   )
 }
 

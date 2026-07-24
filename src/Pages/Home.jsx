@@ -1,20 +1,16 @@
-import Header from "../Components/Header";
-import CarouselComponent from "../Components/Carousel";
-import Content from "../Components/Content";
-import Contact from "../Components/Contact";
-import Footer from "../Components/Footer";
+import MainLayout from '../layouts/MainLayout'
+import CarouselComponent from '../Components/Carousel'
+import Content from '../Components/Content'
+import Contact from '../Components/Contact'
 
 function Home() {
-
   return (
-    <>
-    <Header/>
-    <CarouselComponent/>
-    <Content/>
-    <Contact/>
-    <Footer/>
-    </>
-  );
+    <MainLayout>
+      <CarouselComponent />
+      <Content />
+      <Contact />
+    </MainLayout>
+  )
 }
 
 export default Home

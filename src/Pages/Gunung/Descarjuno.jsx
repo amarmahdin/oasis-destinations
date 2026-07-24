@@ -1,15 +1,12 @@
-import React from 'react'
-import Header from '../../Components/Header'
-import Arjuno from '../../Components/Desc/Arjuno'
-import Footer from '../../Components/Footer'
+import MainLayout from '../../layouts/MainLayout'
+import DestinationDetail from '../../Components/DestinationDetail'
+import { destinationDetails } from '../../data/destinations'
 
 function Descarjuno() {
   return (
-    <>
-    <Header/>
-    <Arjuno/>
-    <Footer/>
-    </>
+    <MainLayout>
+      <DestinationDetail data={destinationDetails.arjuno} />
+    </MainLayout>
   )
 }
 

@@ -1,15 +1,11 @@
-import React from 'react'
-import Header from '../Components/Header'
-import Contnews  from '../Components/Contnews'
-import Footer from '../Components/Footer'
+import MainLayout from '../layouts/MainLayout'
+import Contnews from '../Components/Contnews'
 
 function News() {
   return (
-    <>
-    <Header/>
-    <Contnews />
-    <Footer />
-    </>
+    <MainLayout>
+      <Contnews />
+    </MainLayout>
   )
 }
 

@@ -1,15 +1,11 @@
-import React from 'react'
-import Header from '../../Components/Header'
-import Contairterjun from '../../Components/Contairterjun'
-import Footer from '../../Components/Footer'
+import MainLayout from '../../layouts/MainLayout'
+import CategoryList from '../../Components/CategoryList'
 
 function Airterjun() {
   return (
-    <>
-    <Header/>
-    <Contairterjun/>
-    <Footer/>
-    </>
+    <MainLayout>
+      <CategoryList categoryKey="airterjun" />
+    </MainLayout>
   )
 }
 
